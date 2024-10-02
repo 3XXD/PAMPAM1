@@ -1,0 +1,89 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Более мягкий и приятный шрифт */
+    background-color: #fff6f9; /* Нежный розовый фон */
+    color: #ff7d8a; /* Цвет текста */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Скрываем полосы прокрутки */
+}
+
+.container {
+    margin-top: 100px;
+    position: relative; /* Для плавающих сердечек */
+}
+
+h1 {
+    font-size: 2.5em; /* Увеличенный размер заголовка */
+    margin-bottom: 20px; /* Пробел'12ц между заголовком и кнопками */
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7d8a;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Скругленные края кнопки */
+    font-size: 1.5em; /* Увеличенный размер текста */
+    cursor: pointer;
+    transition: transform 0.2s; /* Плавный эффект при нажатии */
+}
+
+.submit-btn:hover {
+    background-color: #ff4b61;
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.yes-no-btns button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 30px; /* Скругленные края кнопок */
+    cursor: pointer;
+    transition: transform 0.2s; /* Плавный эффект при нажатии */
+}
+
+.yes-btn {
+    background-color: #ff7d8a;
+    color: white;
+}
+
+.no-btn {
+    background-color: #ccc;
+}
+
+input[type="date"], input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ff7d8a;
+    border-radius: 5px;
+    font-size: 1.2em; /* Увеличенный размер текста */
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Анимация плавающих сердечек */
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('path_to_heart_image.png') no-repeat center center; /* Замени на путь к изображению сердечка */
+    background-size: contain;
+    animation: float 5s linear infinite; /* Анимация плавания */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
